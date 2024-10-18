@@ -1,0 +1,4 @@
+#!/bin/sh
+
+./generate-nodesource
+docker build -t vectorsoft-container .
