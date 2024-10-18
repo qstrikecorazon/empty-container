@@ -1,0 +1,8 @@
+services:
+  vectorsoft:
+    build: .
+    volumes:
+      - ./src/vectorsoft-server:/app
+    command: sh -c "cd app && npm i && npm run start:dev"
+    ports:
+      - "3000:3000"
