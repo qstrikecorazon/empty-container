@@ -6,3 +6,19 @@ services:
     command: sh -c "cd app && npm i && npm run start:dev"
     ports:
       - "3000:3000"
+    deploy:
+      resources:
+        limits:
+          # cpus: '0.001'
+          memory: 12G
+  # nginx:
+  #   image: nginx:stable-alpine
+  #   volumes:
+  #     - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+  #     - ./src/vectorsoft-server:/var/www/html
+  #   ports:
+  #     - "7070:80"
+
+networks:
+  vect-network:
+    driver: "bridge"

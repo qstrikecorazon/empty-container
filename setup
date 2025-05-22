@@ -1,4 +1,10 @@
 #!/bin/sh
 
+PROJECT_NAME=vectorsoft-server
+PROJECT_DN=${PROJECT_NAME}.test
+
+# mkdir -p certs
+# mkcert -key-file certs/${PROJECT_NAME}-ssl.key -cert-file certs/${PROJECT_NAME}-ssl.crt ${PROJECT_DN}
+
 ./generate-nodesource
 docker build -t vectorsoft-container .
